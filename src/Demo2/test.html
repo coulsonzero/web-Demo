@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js-->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <input type="checkbox" class="checkboxchart" name="checkboxchart" checked="checked" value="邮件营销"/>邮件营销
+    <input type="checkbox" class="checkboxchart" name="checkboxchart" checked="checked" value="联盟广告"/>联盟广告
+    <input type="checkbox" class="checkboxchart" name="checkboxchart" checked="checked" value="视频广告"/>视频广告
+    <input type="checkbox" class="checkboxchart" name="checkboxchart" checked="checked" value="直接访问"/>直接访问
+    <input type="checkbox" class="checkboxchart" name="checkboxchart" checked="checked" value="搜索引擎"/>搜索引擎
+    <div id="main" style="width: 800px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            tooltip : {
+                trigger: 'axis'
+            },
+            grid:{//边框
+                //x:100,
+                x2:100
+                //y:50
+                //height:350
+            }, 
+            legend: {
+                data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎'],
+                orient: 'vertical',
+                right: 0,
+                top: 100,
+                bottom: 20,
+                show:false
+                //selected:{'邮件营销':true,'联盟广告':false,'视频广告':true,'直接访问':true,'搜索引擎':true}
+            },
+        
+            calculable : true,
+            xAxis : [
+                {
+                    type : 'category',
+                    boundaryGap : false,
+                    data : ['周一','周二','周三','周四','周五','周六','周日']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name:'邮件营销',
+                    type:'line',
+                    stack: '总量',
+                    data:[120, 132, 101, 134, 90, 230, 210],
+                    selected:false
+                },
+                {
+                    name:'联盟广告',
+                    type:'line',
+                    stack: '总量',
+                    data:[220, 182, 191, 234, 290, 330, 310]
+                },
+                {
+                    name:'视频广告',
+                    type:'line',
+                    stack: '总量',
+                    data:[150, 232, 201, 154, 190, 330, 410]
+                },
+                {
+                    name:'直接访问',
+                    type:'line',
+                    stack: '总量',
+                    data:[320, 332, 301, 334, 390, 330, 320]
+                },
+                {
+                    name:'搜索引擎',
+                    type:'line',
+                    stack: '总量', data:[820, 932, 901, 934, 1290, 1330, 1320]
+                }
+            ]
+        };
+                    
+        myChart.setOption(option);
+        
+        // 使用刚指定的选择项数据显示图表。
+        var selectArr = myChart.getOption().legend[0].data;//legend所有值
+        var checkboxs=document.getElementsByName('checkboxchart'); 
+        $(".checkboxchart").click(function(){
+            var obj = {};
+            for(var i=0; i<checkboxs.length; i++){
+                if(checkboxs[i].checked){
+                    obj[selectArr[i]] = true;
+                }else{
+                    obj[selectArr[i]] = false;
+                }
+            } 
+            option.legend.selected = obj;
+            myChart.setOption(option);
+        });
+
+    </script>
+</body>
+</html>
