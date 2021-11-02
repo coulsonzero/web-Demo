@@ -29,7 +29,6 @@ body {
     width: 100%;
     height: 60px;
     background: linear-gradient(to right, #f9f9f9, #d9d9d9);
-    /* background: red; */
     border-radius: 50%;
 }
 .circle {
