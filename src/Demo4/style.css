@@ -20,6 +20,7 @@ body {
     height: 300px;
     background: linear-gradient(to right, #f9f9f9, #d9d9d9);
     border-radius: 0 0 45% 45%;
+    /* overflow: hidden; */
 }
 .top {
     position: absolute;
@@ -99,28 +100,47 @@ body {
     z-index: 1;
     padding: 0 20px;
 }
-.vapour span {
+.vapour span{
     position: relative;
     bottom: 50px;
     display: block;
     margin: 0 2px 50px;
     min-width: 8px;
     height: 120px;
-    background: red;
+    background: #fff;
     border-radius: 50%;
-    animation: animate 5s linear infinite;
+    animation: animate 3s linear infinite;
+    opacity: 0;
+    filter: blur(8px);
+    animation-delay: calc(var(--i) * -0.5s);
+
 }
 @keyframes animate {
     0% {
         transform: translateY(0) scaleX(1);
         opacity: 0;
     }
+    15% {
+        opacity: 1;
+    }
     50% {
         transform: translateY(-150px) scaleX(5);
-        opacity: 1;
+    }
+    95% {
+        opacity: 0;
     }
     100% {
         transform: translateY(-300px) scaleX(10);
-        opacity: 1;
     }
+}
+
+.cat {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to right, #1a1919, #724343);
+    border-radius: 50%;
 }
