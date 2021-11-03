@@ -29,7 +29,7 @@ body {
     transition: 0.15s ease;
 }
 /* 圆形按钮 */
-.toggle span:before {
+.toggle span::before {
     content: "";
     /* display: block; */
     position: absolute;
@@ -58,7 +58,7 @@ body {
     background-color: #27ad39;
 }
 /* 选中复选框后span::before圆形按钮的样式 */
-.toggle input:checked + span:before {
+.toggle input:checked + span::before {
     transform: translateX(calc(100% + 6px));
 }
 /* 聚焦光晕 */
