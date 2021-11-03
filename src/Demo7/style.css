@@ -13,6 +13,9 @@ body {
     min-height: 100vh;
     background-color: var(--body-bg);
 }
+.toggle {
+    cursor: pointer;
+}
 /* 圆角矩形 */
 .toggle span {
     display: block;
