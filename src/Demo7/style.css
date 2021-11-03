@@ -1,0 +1,67 @@
+:root {
+    --body-bg: #e7e7db;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--body-bg);
+}
+/* 圆角矩形 */
+.toggle span {
+    display: block;
+    width: 60px;
+    height: 30px;
+    background: rgb(202, 204, 204);
+    border-radius: 15px;
+    box-shadow: 
+    inset 1px 1px 1px 0 rgba(75, 72, 72, 0.1),
+    inset -1px -1px 1px 0 rgba(128, 125, 125, 0.1),
+    inset 1px -1px 1px 0 rgba(104, 102, 102, 0.1),
+    inset -1px 1px 1px 0 rgba(110, 109, 109, 0.1);
+    position: relative;
+    transition: 0.15s ease;
+}
+/* 圆形按钮 */
+.toggle span:before {
+    content: "";
+    /* display: block; */
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    height: 24px;
+    width: 24px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+    transition: 0.15s ease;
+}
+
+.toggle input {
+    /* clip: rect(0 0 0 0); */
+    /* 隐藏复选框 */
+    clip-path: inset(50%);
+    /* height: 1px; */
+    /* overflow: hidden; */
+    /* position: absolute; */
+    /* white-space: nowrap; */
+    /* width: 1px; */
+}
+/* 选中复选框后span圆角矩形框的样式 */
+.toggle input:checked + span {
+    background-color: #27ad39;
+}
+/* 选中复选框后span::before圆形按钮的样式 */
+.toggle input:checked + span:before {
+    transform: translateX(calc(100% + 6px));
+}
+/* 聚焦光晕 */
+.toggle input:focus + span {
+    box-shadow: 0 0 0 4px #ecf3fe;
+}
