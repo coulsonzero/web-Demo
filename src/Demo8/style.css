@@ -1,0 +1,57 @@
+:root {
+    --body-bg: #e7e7db;
+    --c-text-primary: #282a32;
+    --c-text-secondary: #686b87;
+    --c-text-action: #404089;
+    --c-accent-primary: #434ce8;
+    --c-border-primary: #eff1f6;
+    --c-background-primary: #ffffff;
+    --c-background-secondary: #fdfcff;
+    --c-background-tertiary: #ecf3fe;
+    --c-background-quaternary: #e9ecf4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--body-bg);
+}
+/* 列排 */
+.vertical-tabs {
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-tabs a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    margin: 10px;
+    background-color: transparent;
+    border-radius: 20px;
+    text-decoration: none;
+    /* font-weight: 500; */
+    color: rgba(31, 29, 29, 1);
+    transition:  0.4s ease;
+    border: none;
+}
+
+.vertical-tabs a:hover, 
+.vertical-tabs a:focus, 
+.vertical-tabs a.active {
+    background-color: var(--c-background-tertiary);
+    color: #434ce8;
+    border: 1px solid #686b87;
+}
+
+.vertical-tabs a + * {
+    margin-top: 0.25rem;
+}
