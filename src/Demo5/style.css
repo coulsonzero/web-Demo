@@ -85,10 +85,10 @@ body {
 .item-link {
   color: var(--light-font);
   margin-bottom: 32px;
-  /* transition: 0.2s; */
+  transition: all 0.2s ease;
 }
 .item-link:hover {
-    /* color: var(--dark-font); */
+    color: var(--dark-font);
     color: rgb(0, 0, 0);
     font-weight: 700;
 }
@@ -102,7 +102,7 @@ body {
   color: var(--light-font);
   margin-top: auto;
   cursor: pointer;
-  transition: 0.2s;
+  transition: all 0.2s esae;
 }
 .btn-logout:hover {
   color: var(--dark-font);
