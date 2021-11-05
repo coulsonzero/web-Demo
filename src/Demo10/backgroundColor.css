@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+body {
+    /* 背景色 */
+    background: linear-gradient(215deg, #12c2e9, #c471ed, #f64f59);
+    height: 100vh;
+    /* 居中显示 */
+    display: grid;
+    place-items: center;
+    /* 去滚轮 */
+    margin: 0;
+    padding: 0;
+    /* 字体 */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    /* right drop2 */
+    position: relative;
+}
+
+/* 文本设置 */
+h1 {
+    font-size: 72px;
+    color: white;
+    /* 与p段落的间距 */
+    line-height: 0;
+}
+
+.text {
+    /* 居中显示 */
+    display: grid;
+    place-items: center;
+    /* 将文本显示于上方 */
+    position: relative;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+    font-family: 'Montserrat';
+    /* 与h段落的间距 */
+    line-height: 0;
+}
+
+/* 大球背景图案 */
+.drop {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background: #54ABFB;
+    border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
+    /* other */
+    opacity: 0.8;
+    border: 1px solid #3d93ff;
+}
+
+
+/* 大球质感 */
+.drop::before {
+    /* 放到蓝色球内 */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #318CFE;
+    border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
+    /* other */
+    content: "";
+    box-shadow: -20px 30px 16px #1B6CFB, -40px 60px 32px #1b6cfb, inset -6px 6px 10px #1B6CFB, inset 2px 6px 10px #1a74e5, inset 20px -20px 22px white, inset 40px -40px 44px #a8ceff;
+}
+
+/* 小球 */
+.drop::after {
+    content: "";
+    /* 放到蓝色背景球内 */
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: #E6FDFB;
+    border-radius: 44% 56% 46% 54% / 36% 50% 50% 64%;
+    margin: 40px 0 0 130px;
+    box-shadow: 16px 40px 0 -10px white;
+    opacity: 0.8;
+}
+
+.drop1 {
+    left: -100px;
+    top: -50px;
+}
+
+.drop2 {
+    right: -100px;
+    bottom: -50px;
+    z-index: -1;
+    border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
+}
+
+.drop2::before {
+    border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
+    box-shadow: 30px 30px 16px #1B6CFB, 10px 40px 32px #1b6cfb, inset -6px 6px 10px #1B6CFB, inset 2px 6px 10px #1a74e5, inset 20px -20px 22px white, inset 40px -40px 44px #a8ceff;
+}

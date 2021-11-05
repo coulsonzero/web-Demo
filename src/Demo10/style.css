@@ -1,0 +1,20 @@
+body {
+	background: #222;
+	margin: 0rem;
+	min-height: 100vh;
+	font-family: Futura, sans-serif;
+    /* background: linear-gradient(#e0e9fd 0%, #e9ecf1 90%); */
+}
+#canvas{
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.container {
+    z-index: -2;
+}
+.container .text {
+    visibility: hidden;
+}

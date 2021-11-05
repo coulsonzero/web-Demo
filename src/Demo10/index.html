@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="backgroundColor.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="canvas.js"></script>
+    <script src="app.js"></script>
+    <script>
+        function login(){
+            var frmdata = $('#loginForm').serialize();
+            $.post('/login',frmdata,function(data){
+                if(data == true)
+                {
+                    window.open('/main','_self');
+                }
+            })
+        }
+        </script>
+       
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="container">
+        <div class="drop drop1"></div>
+        <div class="drop drop2"></div>
+        <!-- <div class="drop drop3"></div> -->
+        <div class="text">
+            <h1>DROPMORPHISM</h1>
+            <p>Both the drops are created using CSS</p>
+        </div>
+    </div>
+    <div class="login-box">
+        <h2>Login</h2>
+        <!-- <form action="homepage.html" method="get"> -->
+        <form class="loginForm">
+            <div class="user-box">
+                <input type="text" name="" required="">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required="">
+                <label>Password</label>
+            </div>
+            <button class="btn-login" onclick=login()>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </button>
+        </form>
+    </div>
+    
+</body>
+
+</html>
