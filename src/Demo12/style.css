@@ -75,7 +75,7 @@ body {
         insert 0px 0px 0px 1px #283651,
         insert 0px 6px 0px 0px #eff4ff,
         insert 0px 10px 0px 0px #010103;
-    border-radius: 3px 0 0 3px;
+    border-radius: 2px 0 0 2px;
 }
 .volume::after {
     content: "";
@@ -89,7 +89,7 @@ body {
         insert 0px 0px 0px 1px #283651,
         insert 0px 6px 0px 0px #eff4ff,
         insert 0px 10px 0px 0px #010103;
-    border-radius: 3px 0 0 3px;
+    border-radius: 2px 0 0 2px;
 }
 
 /* 头部 */
