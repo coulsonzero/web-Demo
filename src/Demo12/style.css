@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* background-color: #000; */
+    background: linear-gradient(45deg, #d0e3f2, #73a8ee, #b3f7c5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Popins' sans-serif;
+}
+.iphone {
+    position: relative;
+    background:rgba(10, 10, 10, 1);
+    width: 325px;
+    height: 625px;
+    border-radius: 20px;
+    border: 4px solid rgb(41, 40, 40);
+    box-shadow: 
+        /* insert 0px 0px 5px rgb(168, 163, 163); */
+        insert 0px 0px 0px 1px #f7ffff,
+        insert 0px 0px 0px 2px #c8e2fb,
+        insert 0px 0px 0px 1px #f7ffff,
+        insert 0px 0px 0px 6px #0d0c08,
+        insert 0px 0px 0px 8px #d0e3f2;
+    display: flex;
+    flex-direction: column;
+}
+/* 手机模型 */
+.iphone::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(32, 31, 31);
+    width: 4px;
+    height: 30px;
+    top: 70px;
+    left: -6px;
+    box-shadow: 
+        insert 0px 0px 0px 1px #283651,
+        insert 0px 6px 0px 0px #eff4ff,
+        insert 0px 10px 0px 0px #010103;
+    border-radius: 2px 0 0 2px;
+}
+.iphone::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(22, 22, 22);
+    width: 4px;
+    height: 80px;
+    top: 100px;
+    right: -6px;
+    box-shadow: 
+        insert 0px 0px 0px 1px #283651,
+        insert 0px 6px 0px 0px #eff4ff,
+        insert 0px 10px 0px 0px #010103;
+    border-radius: 0px 2px 2px 0px;
+}
+.volume {
+    position: relative;
+}
+.volume::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(22, 22, 22);
+    width: 4px;
+    height: 50px;
+    top: 130px;
+    left: -6px;
+    box-shadow: 
+        insert 0px 0px 0px 1px #283651,
+        insert 0px 6px 0px 0px #eff4ff,
+        insert 0px 10px 0px 0px #010103;
+    border-radius: 3px 0 0 3px;
+}
+.volume::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(22, 22, 22);
+    width: 4px;
+    height: 50px;
+    top: 200px;
+    left: -6px;
+    box-shadow: 
+        insert 0px 0px 0px 1px #283651,
+        insert 0px 6px 0px 0px #eff4ff,
+        insert 0px 10px 0px 0px #010103;
+    border-radius: 3px 0 0 3px;
+}
+
+/* 头部 */
+.header {
+    position: relative;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    width: 100%;
+    height: 80px;
+}
+.header .back {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background: rgba(39, 38, 38, 1);
+    top: 50%;
+    /* left: 30px; */
+    
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 4px;
+    margin-left: 20px;
+    transition: all 0.5s ease;
+}
+.header .back:hover {
+    background: rgb(83, 105, 177);
+}
+.bx-chevron-left {
+    color:rgba(200, 200, 200, 0.767);
+    font-size: 2rem;
+}
+.headerText {
+
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+}
+
+/* 内容主体 */
+.main-content {
+    flex: auto;
+    /* background: rgb(168, 163, 163); */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.main-content::-webkit-scrollbar {
+    display: none;
+}
+.messageBox {
+    background:rgb(27, 27, 27);
+    float: left;
+    width: 80%;
+    height: auto;
+    margin: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 12px;
+    vertical-align: middle;
+    align-items: center;
+}
+
+/* 底部 */
+.footer {
+    flex-shrink: 0;
+    /* background: rgba(200, 200, 200, 0.5); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.message {
+    float: left;
+    width: 80%;
+    height: 30px;
+    margin: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    background:rgba(39, 38, 38, 1);
+    color: #fff;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 400;
+
+}
+.message::placeholder {
+    padding-left: 15px;
+}
+.siri {
+    float: left;
+    width: auto;
+    margin-right: 8px;
+    background: rgb(82, 82, 212);
+    border: none;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.bxs-microphone {
+    color: rgb(223, 222, 222);
+    padding: 7px;
+}
+.siri:hover {
+    background: rgb(95, 188, 201);
+}
