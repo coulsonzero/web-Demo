@@ -9,7 +9,7 @@
 .banner {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(interior.png);
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(background.png);
     background-size: cover;
     background-position: center;
 }
@@ -37,9 +37,7 @@
     font-size: 20px;
     transition: 0.5s ease-in-out;
 }
-.navbar ul li:hover a {
-    color: #009688;
-}
+
 .navbar ul li::after {
     position: absolute;
     content: '';
@@ -50,6 +48,14 @@
     top: 100%;
     transform: translateY(5px);
     transition: 0.5s ease;
+}
+/*
+.navbar ul li a.is-active {
+    color: red;
+}
+*/
+.navbar ul li:hover a {
+    color: #009688;
 }
 .navbar ul li:hover::after {
     width: 100%;
