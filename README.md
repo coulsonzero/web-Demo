@@ -9,3 +9,5 @@
 - Demo6 before绘制图标
 - Demo7 ios风格切换按钮
 - Demo8 竖排导航栏
+- Demo12 iphone
+- Demo13 主页
