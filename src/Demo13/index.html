@@ -6,20 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to make a website - Easy Tutorials</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="app.js"></script>
 
 </head>
 <body>
-    <div class="banner">
-        <div class="navbar">
-            <img src="logo.png" class="logo">
+    <!-- 动效 -->
+    <canvas id="canvas"></canvas>
+    <!-- 背景色 -->
+    <div class="banner"></div>
+    <div class="container">
+        <div class="header-nav">
+            <img src="coulsonzero.jpg" class="logo">
             <ul>
-                <li><a href="#" class="topbar-link is-active">Home</a></li>
-                <li><a href="#" class="topbar-link">About</a></li>
-                <li><a href="#" class="topbar-link">Service</a></li>
-                <li><a href="#" class="topbar-link">Blog</a></li>
-                <li><a href="#" class="topbar-link">Contact</a></li>
+                <li><a href="#" class="nav-link is-active">Home</a></li>
+                <li><a href="https://github.com/coulsonzero" target="_blank" class="nav-link">Github</a></li>
+                <li><a href="http://www.baidu.com" target="_blank" class="nav-link">Baidu</a></li>
+                <li><a href="https://i.csdn.net/#/user-center/profile?spm=1000.2115.3001.5111" target="_blank" class="nav-link">CSDN</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
             </ul>
         </div>
         <div class="content">
@@ -31,5 +35,7 @@
             </div>
         </div>
     </div>
+    <!-- 放在后面 -->
+    <script src="canvas.js"></script>
 </body>
 </html>
