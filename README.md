@@ -11,3 +11,5 @@
 - Demo8 竖排导航栏
 - Demo12 iphone
 - Demo13 主页
+- Demo14 横排Table图片
+- Demo15 文字聚光灯

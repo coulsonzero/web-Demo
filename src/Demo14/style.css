@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', -apple-system, sans-serif;
+    color: #fff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./images/background.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+div {
+    /* display: block; */
+}
+a {
+    text-decoration: none;
+    /* background-color: transparent; */
+    /* object-fit: cover; */
+}
+li {
+    list-style: none;
+}
+.container {
+    width: 80%;
+    height: auto;
+}
+.customers-tab-head {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    border-bottom: 1px solid hsla(0,0%,100%,.2);
+}
+.customers-tab-item {
+    display: block;
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: -1px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s;
+    /* overflow: hidden; */
+}
+.customers-tab-item:hover{
+    color: #009688;
+}
+.customers-tab-item.active {
+    font-weight: 800;
+    color: rgb(51, 214, 200);
+    font-size: 20px;
+}
+
+
+.customers-tab-item::before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: #009688;
+    left: 0%;
+    /* top: 100%; */
+    /* transform: translateY(-2px) rotateY(90deg); */
+    bottom: 0;
+    transform: scaleX(0);
+    /* -webkit-transform: scaleX(0); */
+    transition: 0.5s ease;
+}
+.customers-tab-item:hover::before {
+    /* width: 50%; */
+    /* transform: translateY(-2px) rotateY(180deg); */
+    transform: scaleX(1);
+    /* -webkit-transform: scaleX(1); */
+}
+
+
+.solutions-list {
+    display: flex;
+}
+.solutions-card {
+    position: relative;
+    display: block;
+    height: 316px;
+    padding: 32px;
+    background-size: cover;
+    background-position: 0;
+    overflow: hidden;
+    color: #fff;
+    user-select: none;
+}
+.solutions-card-cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(180deg,transparent 0, rgba(118, 219, 219, 0.5));
+    transition: .65s;
+}
+.solutions-card-text {
+    position: absolute;
+    top: 0;
+    left: 32px;
+    right: 32px;
+    height: 164px;
+    transition: .65s;
+    margin-top: 196px;
+}
+.solutions-list > li {
+    width: 20%;
+    /* width: 455px; */
+    /* height: 252px; */
+    flex-grow: 1;
+    /* padding : 18px; */
+    transition: .65s;
+    display: block;
+    padding: 10px 20px;
+    background: rgba(90, 83, 83, 0.7);
+    transition: 0.5s;
+}
+
+ul {
+    display: inline-block;
+}
+li:hover {
+    width: 40%;
+    transform: scale(0.8);
+}

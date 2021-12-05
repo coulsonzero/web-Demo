@@ -1,0 +1,32 @@
+@import url('https://googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222222;
+}
+.text {
+    position: relative;
+    text-transform: uppercase;
+    color: #333333;
+    font-size: 8rem;
+}
+.text::after {
+    content: 'Hello Welcome';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background-image: linear-gradient(to right,
+                        #96fbc4, #ff758c #f9f586,#b721ff,
+                        #92fe9d, #192a56, #6d214f, #00d2d3);
+    background-clip: text;
+    clip-path: circle(100px at 0% 50%);
+}
