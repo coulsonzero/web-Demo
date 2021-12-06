@@ -72,19 +72,22 @@
     position: absolute;
     content: '';
     height: 3px;
-    width: 0%;
+    /* width: 0%; */
+    width: 100%;
     background: #009688;
     left: 0;
     top: 100%;
-    transform: translateY(5px);
-    transition: 0.5s ease;
+    /* transform: translateY(5px); */
+    transform: scaleX(0);
+    transition: all 0.3s ease;
 }
 
 .header-nav ul li:hover a {
     color: #009688;
 }
 .header-nav ul li:hover::after {
-    width: 100%;
+    /* width: 100%; */
+    transform: scaleX(1);
 }
 
 /* 主体内容 */
