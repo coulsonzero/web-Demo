@@ -12,7 +12,8 @@
 	top: 0;
 	left: 0;
     /* important */
-	z-index: -1;
+	/* z-index: -1; */
+	z-index: auto;
     pointer-events: none;
 }
 
